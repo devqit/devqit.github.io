@@ -1,16 +1,16 @@
-$(document).ready(function(){
+$(document).ready(function(){	
 	//Prevents any modal boxes or transitions to pop up before page load
 	$("div").removeClass("preload");
 	
-	//Slides down navBar
+	//Slides down navBar ONLY in the homepage
 	$('.navBar').slideDown(400);
 	
-	//Slides down sites menu
+	//Slides down user sites menu
 	$('.userDir li').hover(function(){
 		$(this).children('ul').slideToggle(200);
 	});
 	
-	//Changes the home button on navBar
+	//Changes the home button on navBar to show our Team Name
 	$('#home').hover(function(){
 			$(this).text('Powered by GitHub');
 		}, function(){
