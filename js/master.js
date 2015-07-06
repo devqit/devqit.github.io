@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('.navBar').slideDown(400);
 	
 	//Slides down user sites menu
-	$('.userDir li').hover(function(){
+	$('.userDir li').click(function(){
 		$(this).children('ul').slideToggle(200);
 	});
 	
