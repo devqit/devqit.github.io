@@ -2,7 +2,7 @@ $(document).ready(function(){
 	//Prevents any modal boxes or transitions to pop up before page load
 	$("div").removeClass("preload");
 	
-	//Slides down navBar ONLY in the homepage
+	//Slides down navBar
 	$('.navBar').slideDown(400);
 	
 	//Slides down user sites menu

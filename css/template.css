@@ -60,7 +60,7 @@ html{
 	box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5); /* I use rgba here for transparency */
 }
 
-#HP.navBar{
+.navBar{
 	display: none;
 }
 
