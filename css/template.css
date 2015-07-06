@@ -103,6 +103,14 @@ html{
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
+.userDir > li:first-child:hover{
+	border-style: solid;
+}
+
+.userDir > li:not(first-child):hover{
+	border-left-style: solid;
+	border-right-style: solid;
+}
 .siteDir  a:hover{
 	color: green;
 }
