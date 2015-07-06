@@ -343,9 +343,9 @@ $(document).ready(function(){
 	
 	//Changes the home button on navBar to show our Team Name
 	$('#home').hover(function(){
-			$(this).text('by IRWWE-HC');
+			$(this).text('Powered by GitHub');
 		}, function(){
-			$(this).text('Wiffle');
+			$(this).text('Portfolio');
 		}
 	);
 });
