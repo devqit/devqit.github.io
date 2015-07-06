@@ -150,6 +150,10 @@ html{
 	display: none;
 }
 
+.userDir a:hover{
+	color: green;
+}
+
 .userDir a{
 	color: black;
 	text-decoration:none;
