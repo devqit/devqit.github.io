@@ -67,6 +67,9 @@ html{
 	list-style-type: none;
 }
 
+.userDir > li:hover{
+	color: green;
+}
 .userDir  ul{
 	display: none;
 }
