@@ -146,6 +146,10 @@ html{
 	list-style-type: none;
 }
 
+.userDir ul{
+	display: none;
+}
+
 .userDir a{
 	color: black;
 	text-decoration:none;
