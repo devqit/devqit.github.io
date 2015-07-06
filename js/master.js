@@ -11,8 +11,8 @@ $(document).ready(function(){
 	});
 	
 	//Changes the home button on navBar to show our Team Name
-	$('#home').hover(function(){
-			$(this).text('Powered by GitHub');
+	$('.USdirHeading').hover(function(){
+			$(this).text('Previous Projects');
 		}, function(){
 			$(this).text('Portfolio');
 		}

@@ -51,97 +51,18 @@ html{
 }
 
 /* Navigation Bar */
-.navBar{
-	position: relative;
-	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #000029;
-	box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5); /* I use rgba here for transparency */
-}
 
-.navBar{
-	display: none;
-}
-
-.navBar a{
-	position: relative;
-	text-decoration: none;
-	display: inline-block;
-	padding: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 0px;
-	border-radius: 15px;
-	font-family: 'Trebuchet MS';
-}
-
-.navBarRight{
-	position: relative;
-	float: right;
-	list-style-type: none;
-	right: 4%;
-	display: -webkit-box;
-}
-
-.navBarRight > li {
-	display: inline;
-	margin: 0px;
-}
-
-.navBarRight a{
-	position: relative;
-	top: 5px;
-	background-color: #3D5C99;
-}
-
-.navBarRight a:hover{
-	position: relative;
-	background-color: #334C80;
-}
-
-.navBar a:link{
-	color: white;
-}
-
-.navBar a:visited{
-	color: white;
-}
-
-#home{
-	background-color: #3D7A99;
-	text-align: center;
-	left: 10%;
-	font-size: 25px; 
-	border-radius: 25px;
-}
-
-#home:hover{
-	background-color: #5CE68A;
-}
-
-#userSite {
-	background-color: #3D6629;
-}
-
-#userSite:hover {
-	background-color: #2E4C1F;
-}
-
-#gitLink {
-	background-color: #804C80;
-}
-
-#gitLink:hover{
-	background-color: #663D66;
-}
 
 /* General user-site directory stylings */
 .USdirHeading {
-	margin-top: 5%;
+	margin-top: 2%;
+	margin-bottom: 3%;
 	text-align: center;
 }
 
+.userDir {
+	background-color: 1 1 1 0.1;
+}
 .userDir li{
 	list-style-type: none;
 }
