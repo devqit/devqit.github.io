@@ -61,15 +61,16 @@ html{
 }
 
 .userDir {
-	background-color: 1 1 1 0.1;
+	position: relative;
+	display: block;
+	width: 70%;
+	margin: auto;
+	bottom: 0;
 }
 .userDir li{
 	list-style-type: none;
 }
 
-.userDir > li:hover{
-	color: green;
-}
 .userDir  ul{
 	display: none;
 }
@@ -98,6 +99,9 @@ html{
 	text-align: center;
 }
 
+.userDir > li:hover{
+	background-color: rgba(0, 0, 0, 0.2);
+}
 
 .siteDir  a:hover{
 	color: green;
