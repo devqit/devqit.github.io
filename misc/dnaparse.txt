@@ -1,0 +1,79 @@
+def get_complement(n):
+	if n == 'A':
+		return 'T'
+	if n == 'T':
+		return 'A'
+	if n == 'C':
+		return 'G'
+	if n == 'G':
+		return 'C'
+
+def get_reverse_complement(dna):
+	rev = dna[::-1]
+	output = ""
+	for c in rev:
+		output+=get_complement(c)
+	return output
+
+def rest_of_ORF(dna):
+	allCodons = ['TAG', 'TAA', 'TGA']
+	counter = 0
+	while counter < len(dna):
+		if dna[counter:counter+3] in allCodons:
+			return dna[:counter]
+		else:
+			counter+=3	
+	return dna
+
+def find_all_ORFS_oneframe(dna):
+	startCodon = "ATG"
+	allCodons = ['TAG', 'TAA', 'TGA']
+	counter = 0;
+	nextIndex = 0
+	output = []
+	while counter < len(dna):
+		start = dna.find(startCodon, counter);
+		if start == -1 or start % 3 != 0:
+			counter+=3
+			continue
+		if rest_of_ORF(dna) is None:
+			counter+=3
+			continue
+		nextIndex = len(rest_of_ORF(dna))
+		counter += nextIndex + 3
+		if start >= counter - 3:
+			output.append(dna[start:counter])
+		else:
+			output.append(dna[start:counter-3])
+		
+	return output
+	
+#print(find_all_ORFS_oneframe("ATGCATGAATGTAGATAGATGTGCCC"))
+#print(find_all_ORFS_oneframe("ATGACCATTTAGATGTA"))
+def find_all_ORFS(dna):
+	noOff = find_all_ORFS_oneframe(dna)
+	oneOff = find_all_ORFS_oneframe(dna[1:])
+	twoOff = find_all_ORFS_oneframe(dna[2:])
+	
+	output = noOff
+	for orf in oneOff:
+		if orf not in output:
+			output.append(orf)
+	
+	for orf in twoOff:
+		if orf not in output:
+			output.append(orf)
+			
+	return output
+	
+#print(find_all_ORFS("ATGCATGAATGTAG"))
+
+def find_all_ORFS_both_strands(dna):
+	output = find_all_ORFS(dna)
+	comp = find_all_ORFS(get_reverse_complement(dna))
+	for orf in comp:
+		if orf not in output:
+			output.append(orf)
+	return output
+
+#print(find_all_ORFS_both_strands("ATGCGAATGTAGCATCAAA"))
